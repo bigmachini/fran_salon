@@ -3,12 +3,21 @@
     <data>
         <menuitem id="salon_group_menu"
                   parent="salon_management.salon_management_salon_root"
-                  name="Salon Group"
+                  name="Groups"
                   action="salon_group_action"/>
 
         <menuitem id="salon_group_service_menu"
                   parent="salon_management.salon_management_salon_root"
-                  name="Salon Group Services"
+                  name="Group Services"
                   action="salon_group_service_action"/>
+
+        <menuitem id="salon_service_category_menu"
+                  parent="salon_management.salon_management_salon_root"
+                  name="Service Categorie"
+                  sequence="100"
+                  action="salon_service_category_action"/>
+        <menuitem id="salon_management.salon_service_menu_action" parent="salon_management.salon_management_salon_root"
+                  action="salon_management.salon_service_action" sequence="101"/>
+
     </data>
 </odoo>

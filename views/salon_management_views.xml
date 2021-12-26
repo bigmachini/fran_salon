@@ -44,6 +44,14 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+
+    <record id="salon_service_category_action" model="ir.actions.act_window">
+        <field name="name">Salon Service Category</field><!--            <field name="view_type">form</field>-->
+        <field name="res_model">salon.service.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
     <record id="salon_chair_ext_form" model="ir.ui.view">
         <field name="name">salon_chair_ext_form.form</field>
         <field name="model">salon.chair</field>
@@ -57,5 +65,26 @@
         </field>
     </record>
 
+    <record id="salon_service_ext_view_form" model="ir.ui.view">
+        <field name="name">salon.service.ext.view.form</field>
+        <field name="model">salon.service</field>
+        <field name="inherit_id" ref="salon_management.salon_service_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="salon_service_category_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="salon_service_ext_view_tree" model="ir.ui.view">
+        <field name="name">salon.service.ext.view.tree</field>
+        <field name="model">salon.service</field>
+        <field name="inherit_id" ref="salon_management.salon_service_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="salon_service_category_id"/>
+            </xpath>
+        </field>
+    </record>
 
 </odoo>

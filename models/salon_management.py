@@ -77,3 +77,9 @@ class ServiceCategory(models.Model):
             vals['name'] = name.upper()
         write_res = super(ServiceCategory, self).write(vals)
         return write_res
+
+
+class SalonService(models.Model):
+    _inherit = 'salon.service'
+
+    salon_service_category_id = fields.Many2one('salon.service.category', required=True)

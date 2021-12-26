@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_salon_group,salon_group,model_salon_group,base.group_user,1,1,1,0
 access_salon_group_service,salon_group_service,model_salon_group_service,base.group_user,1,1,1,0
+access_salon_service_category,salon_service_category,model_salon_service_category,base.group_user,1,1,1,0
