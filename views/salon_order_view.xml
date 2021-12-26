@@ -45,10 +45,13 @@
             <field name="res_model">salon.group.service</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <menuitem id="salon_group_menu" parent="salon_management.salon_management_salon" name="Salon Group"
+        <menuitem id="salon_group_menu"
+                  parent="salon_management.salon_management_salon"
+                  name="Salon Group"
                   action="salon_group_action"/>
 
-        <menuitem id="salon_group_service_menu" parent="salon_management.salon_management_salon"
+        <menuitem id="salon_group_service_menu"
+                  parent="salon_management.salon_management_salon"
                   name="Salon Group Services"
                   action="salon_group_service_action"/>
 
