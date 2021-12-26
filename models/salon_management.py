@@ -9,7 +9,6 @@ class SalonGroup(models.Model):
     salon_group_service_ids = fields.One2many('salon.group.service', 'salon_group_id')
     salon_chair_ids = fields.One2many('salon.chair', 'salon_group_id')
 
-
     _sql_constraints = [
         ('unique_group_name', 'unique(name)', 'Name already exists')]
 
