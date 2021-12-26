@@ -13,7 +13,7 @@
 
         <menuitem id="salon_service_category_menu"
                   parent="salon_management.salon_management_salon_root"
-                  name="Service Categorie"
+                  name="Service Categories"
                   sequence="100"
                   action="salon_service_category_action"/>
         <menuitem id="salon_management.salon_service_menu_action" parent="salon_management.salon_management_salon_root"
