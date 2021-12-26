@@ -2,12 +2,12 @@
 <odoo>
     <data>
         <menuitem id="salon_group_menu"
-                  parent="salon_management.salon_management_menu_root"
+                  parent="salon_management.salon_management_salon_root"
                   name="Salon Group"
                   action="salon_group_action"/>
 
         <menuitem id="salon_group_service_menu"
-                  parent="salon_management.salon_management_menu_root"
+                  parent="salon_management.salon_management_salon_root"
                   name="Salon Group Services"
                   action="salon_group_service_action"/>
     </data>
