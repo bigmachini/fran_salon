@@ -47,3 +47,33 @@ class SalonChair(models.Model):
     _inherit = 'salon.chair'
 
     salon_group_id = fields.Many2one('salon.group', required=True)
+
+
+class ServiceCategory(models.Model):
+    _name = 'salon.service.category'
+
+    name = fields.Char('Category Name', required=True)
+    salon_service_ids = fields.One2many('salon.service', 'salon_service_category_id')
+
+    _sql_constraints = [
+        ('unique_category_name', 'unique(name)', 'Service Category already exists')]
+
+    @api.model
+    def create(self, vals):
+        name = vals.get('name', None)
+        if name:
+            name = name.upper()
+            names = self.search([('name', '=', name)])
+            if names:
+                raise ValidationError(
+                    _(f"Service ({name}) Already exists"))
+            vals['name'] = name
+            res = super().create(vals)
+            return res
+
+    def write(self, vals):
+        name = vals.get('name', None)
+        if name:
+            vals['name'] = name.upper()
+        write_res = super(ServiceCategory, self).write(vals)
+        return write_res
