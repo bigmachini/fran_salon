@@ -19,8 +19,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/salon_order_view.xml',
-        'views/salon_management_chair.xml',
+        'views/salon_management_views.xml',
+        'views/salon_management_menus.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
