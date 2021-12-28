@@ -45,12 +45,22 @@
                         <notebook>
                             <page name="services" string="Services">
                                 <field name="salon_service_ids">
-                                    <tree string="Services" create="false" delete="false">
+                                    <tree string="Services" delete="false">
                                         <field name="name"/>
                                         <field name="currency_id" invisible="1"/>
+                                        <field name="price_lower" widget="monetary"/>
                                         <field name="price" widget="monetary"/>
                                         <field name="time_taken" widget="float_time"/>
                                     </tree>
+                                    <form string="Service Details">
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="currency_id" invisible="1"/>
+                                            <field name="price_lower" widget="monetary"/>
+                                            <field name="price" widget="monetary"/>
+                                            <field name="time_taken" widget="float_time"/>
+                                        </group>
+                                    </form>
                                 </field>
                             </page>
                         </notebook>
